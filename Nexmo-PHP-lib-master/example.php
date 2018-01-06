@@ -1,8 +1,6 @@
 <?php
 
-
 	include ( "NexmoMessage.php" );
-
 
 	/**
 	 * To send a text message.
