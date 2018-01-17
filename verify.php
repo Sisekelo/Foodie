@@ -20,7 +20,7 @@ if(isset($_GET['email']) && !empty($_GET['email']))
     else {
         $_SESSION['message'] = "Your account has been activated!";
         // Set the user status to active (active = 1)
-        $mysqli->query("UPDATE details SET active='1' WHERE email='$email'") or die($mysqli->error);
+        $mysqli->query("UPDATE details SET Active='1' WHERE email='$email'") or die($mysqli->error);
         $_SESSION['active'] = 1;
         header("location: index.php");
     }
