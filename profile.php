@@ -153,10 +153,15 @@ else{
     </div>
   </div>
  
-<script type="text/javascript" src="js/true.js?v=2"></script>
+<script type="text/javascript" src="js/true.js?v=3"></script>
 </body>
 
 <script type="text/javascript">
 	document.getElementsByClassName("loader")[0].style.display ="none"; //to make sure loader disappears after page loads.
 </script>
+
+
+
+
+
 </html>
