@@ -12,7 +12,7 @@ if(isset($_GET['email']) && !empty($_GET['email']))
     // Select user with matching email and hash, who hasn't verified their account yet (active = 0)
     $result = $mysqli->query("SELECT * FROM details WHERE email='$email' AND active='0'");
 
-    if ( $result->num_rows > 0 )
+    if ( $result->num_rows > 1)
     { 
         $_SESSION['message'] = "Account has already been activated or the URL is invalid!";
         header("location: notification.php");
