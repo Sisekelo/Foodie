@@ -122,10 +122,10 @@ else{
             </h2> 
           </div>
           <div style="height: 10vh;background: #267DDD" class="center">
-            <h1><div style="overflow: auto" 
+            <div style="overflow: auto" 
                         data-description="Hey there, register for Oui Deliver and get food delivered to your door step"
                         data-url="https://ouideliver.xyz/Foodie/index.php?refer=<?= $email ?>" class="sharethis-inline-share-buttons">
-                    </div>Share</h1>
+                    </div>Share
           </div>
         </div>
 
@@ -153,7 +153,7 @@ else{
     </div>
   </div>
  
-<script type="text/javascript" src="js/true.js?v=3"></script>
+<script type="text/javascript" src="js/true.js?v="></script>
 </body>
 
 <script type="text/javascript">
