@@ -6,6 +6,8 @@ $result = $mysqli->query("SELECT * FROM details WHERE email='$email'");
 
 if ( $result->num_rows == 0 ){ // User doesn't exist
 
+//send all this info to a registering form
+
     $_SESSION['email'] = $email;
     $_SESSION['firstname'] = $_POST['firstname'];
     $_SESSION['surname'] = $_POST['surname1'];
@@ -15,9 +17,9 @@ if ( $result->num_rows == 0 ){ // User doesn't exist
     header("location: registering.php");
 }
 else { // User exists
-    $user = $result->fetch_assoc();
+    $user = $result->fetch_assoc(); //get all that is associated with search
 
-    if ($_POST['email'] ==$user['email']){
+    if ($_POST['email'] == $user['email']){
         
         $_SESSION['first_name'] = $user['name'];
         $_SESSION['last_name'] = $user['surname'];

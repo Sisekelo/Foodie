@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 
 <body>
- <div class="wrapper" style="overflow: scroll">
+ <div class="wrapper" style="overflow: auto">
   <div class="container">
     <img src="<?= $picture ?>" id="profile">
     <h1>Please give us some more info, <?= $first_name ?>  </h1>
@@ -48,8 +48,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
               <input type="text" required name='lastname' placeholder="Last Name" value="<?= $surname ?>" style="display: none" />
               <input type="text" name='referer' placeholder="referer" value="<?= $referer ?>" style="display: none" />
             <input type="email" required autocomplete="off" name='email' placeholder="Email" value="<?= $email ?>" style="display: none" />
-            <input  type="tel" id="number" pattern="[+]{1}[0-9]{11}" name="cellnumber" title="Please use your number starting with '+230' " onblur="FixNumber()" placeholder ="+XXXXXXXXXXX" required>
-            <input type="text" autocomplete="off" name='room' placeholder="room number" style="display: none"  />
+            <input  type="tel" id="number" pattern="[+]{1}[0-9]{11}" name="cellnumber" title="Please use your number starting with '+230' " placeholder ="+230XXXXXXXX" required>
+            <select id="residence"  name="residence">
+            <option value="" disabled selected="" >Please select your residence</option>
+              <option value="HyperTek">HyperTek</option>
+              <option value="Grand Gaube">Grand Gaube</option>
+              <option value="Lilas">Lilas</option>
+              <option value="Lilas">Other</option>
+            </select>
+            <input type="text" autocomplete="off" name='room' placeholder="room number"/>
             <input type="text" class="form-control"  style="display: none" required autocomplete="off" name='picURL' placeholder="pictureURL" value="<?= $picture ?>" /> 
             </div>
 

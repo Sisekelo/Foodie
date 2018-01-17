@@ -188,3 +188,11 @@ function changeClass(){
 function cancel(){
   document.getElementsByClassName("sidebar active")[0].className = "sidebar"
 }
+
+function changeClass2(){
+  document.getElementsByClassName("sharebar")[0].className += " active"
+}
+
+function cancel2(){
+  document.getElementsByClassName("sharebar active")[0].className = "sharebar"
+}

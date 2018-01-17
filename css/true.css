@@ -11,11 +11,20 @@ body p{
 body h1{
 	font-size: 200%;
 	line-height: 1.2;
-	font-family: 'Abel';
+	font-family: 'Avenir';
+  margin: 0;
+}
+
+body h2{
+  line-height: 1.2;
+  font-family: 'Avenir';
+  margin: 0;
+  font-weight: 500;
+}
 }
 
 th,span{
-	font-family: 'Abel';
+	font-family: 'Avenir';
 }
 
 /*#pay input{
@@ -229,7 +238,7 @@ box-shadow: -1px -1px 8px 10px rgba(0,0,0,0.75);
 	position: absolute;
 }
 
-.center p {
+.center p,.center h1, #pointsTeller{
     margin: 0;
     position: absolute;
     top: 50%;
@@ -333,7 +342,7 @@ input[type=checkbox]+label{
     -webkit-transform: rotate(90deg); /* Safari */
     transform: rotate(90deg);
 }
-.sidebar{
+.sidebar, .sharebar{
   display: none;
   position:fixed;
   width:80%;
@@ -434,4 +443,82 @@ input[type=checkbox]+label{
 
 a:visited {
     text-decoration: none;
+}
+
+#list{
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  background: #04b4aa
+}
+
+#list li{
+      padding-top: 5%;
+}
+
+#list *{
+  text-decoration: none;
+  color: black;
+  font-family: Avenir;
+  font-size: 100%;
+}
+
+#resultTable {
+          background-color: white;
+          margin-top: 8px;
+          width: 100%;
+          color:#000000;
+        }
+                      
+#resultTable th.sortable {
+  background: url("bg_header.jpg") no-repeat scroll 0 0 #04b4aa;
+  border-bottom: 1px solid black;
+  border-right: 1px solid #C1DAD7;
+  border-top: 1px solid #C1DAD7;
+  color: #4F6B72;
+  font: 14px black "Avenir",Abel,Arial,Helvetica,sans-serif;
+  letter-spacing: 2px;
+  padding: 3px 3px 3px 6px;
+  text-align: left;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+#resultTable th.sortable:hover { color: black; }
+#resultTable th {
+   background: url("bg_header.jpg") no-repeat scroll 0 0 #04b4aa;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  font: normal 12px Avenir,Abel,Arial,Helvetica,sans-serif;
+  letter-spacing: 2px;
+  padding: 3px 3px 3px 6px;
+  text-align: left;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+}
+#resultTable th:hover { color: black; }
+#resultTable th.sorted-asc, th.sorted-desc  { color: black; }
+
+#resultTable td {
+  border-bottom: 1px solid #C1DAD7;
+  border-right: 1px solid #C1DAD7;
+  padding: 3px 3px 3px 6px;
+  font: normal 12px Avenir,Abel,Arial,Helvetica,sans-serif;
+}
+#resultTable td.odd {
+  font: normal 11px "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+}
+
+#resultTable td.hovered {
+  background-color: lightblue;
+  color: #666;
 }

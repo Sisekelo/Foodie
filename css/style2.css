@@ -128,7 +128,17 @@ form, #meal{
   position: relative;
   z-index: 2;
 }
-form input, #meal{
+
+option{
+  text-align: center;
+}
+
+#residence{
+      margin: 0 auto 10px auto;
+          padding: 10px 15px;
+}
+
+form input, #meal, select{
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -147,11 +157,11 @@ form input, #meal{
           transition-duration: 0.25s;
   font-weight: 300;
 }
-form input:hover, #meal:hover {
+form input:hover, #meal:hover, select:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-#meal:focus {
+#meal:focus, select:focus{
   background-color: white;
   color: #53e3a6;
 }
@@ -185,7 +195,7 @@ form button:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 70%;
   z-index: 1;
 }
 .bg-bubbles li {
