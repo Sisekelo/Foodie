@@ -126,7 +126,7 @@ else{
             <div style="overflow: auto" 
                         data-description="Hey there, register for Oui Deliver and get food delivered to your door step"
                         data-url="https://ouideliver.xyz/Foodie/index.php?refer=<?= $email ?>" class="sharethis-inline-share-buttons">
-                    </div>Share
+                    </div>
           </div>
         </div>
 
