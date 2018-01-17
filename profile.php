@@ -96,7 +96,7 @@ else{
           <hr width="70%" style="color: black">
 
            <ul id="list">
-              <li><a onclick="changeClass2()">Free Meals</a></li>
+              <li><a href="" onclick="changeClass2()">Free Meals</a></li>
               <li><a href="pastOrders.php?number=<?=$number?>&name=<?=$first_name?>">Past Orders</a></li>
               <li><a href="SoftwareChallenge3.html">Contact Us</a></li>
               <!-- <li ><a id = "contactProf" onClick="contactUs()">Log Out</a></li> -->
