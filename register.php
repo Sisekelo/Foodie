@@ -93,7 +93,7 @@ else { // Email doesnt already exist in a database, proceed...
         $message .= '<img src="img/Truck.png" style="height: 10vh;margin: 0;position: absolute;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);"><br><br>'; 
         $message .= '<h1 style="text-align: center; font-family: Avenir">Hi, Sisekelo. Welcome to Oui Deliver.</h1> <br>';
         $message .= '<h2 style="text-align: center; font-family: Avenir">Let us verify your account.</h2><br>';
-        $message .= '<p style="text-align: center;font-family: Avenir;border: 1px solid blue;background: #04b4aa;padding: 5%;text-decoration: none;color: black;font-size: 150%;margin: 0;"><a href="'.$thanks.'" style="text-decoration: none; color: black;padding: 5%">Click here to verify account</a></p>";
+        $message .= '<p style="text-align: center;font-family: Avenir;border: 1px solid blue;background: #04b4aa;padding: 5%;text-decoration: none;color: black;font-size: 150%;margin: 0;"><a href="'.$thanks.'" style="text-decoration: none; color: black;padding: 5%">Click here to verify account</a></p>"';
         $message .= "</body></html>';
 
         mail($to, $subject, $message, $headers);
