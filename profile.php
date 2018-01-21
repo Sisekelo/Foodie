@@ -98,7 +98,7 @@ else{
            <ul id="list">
               <li><a href="#" onclick="changeClass2()" style="cursor: pointer;">Free Meals</a></li>
               <li><a href="pastOrders.php?number=<?=$number?>&name=<?=$first_name?>">Past Orders</a></li>
-              <li><a class="typeform-share link" href="https://microtising.typeform.com/to/gcJXx3" data-mode="drawer_left" style="color:#000000;text-decoration:none;font-size:20px;" target="_blank">Contact us </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+              <li><a class="typeform-share link" href="https://microtising.typeform.com/to/gcJXx3" data-mode="drawer_left" style="color:#000000;text-decoration:none;font-size:20px;z-index: 9999999" target="_blank">Contact us </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 </li>
               <!-- <li ><a id = "contactProf" onClick="contactUs()">Log Out</a></li> -->
             </ul>
