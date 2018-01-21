@@ -59,8 +59,8 @@ else { // Email doesnt already exist in a database, proceed...
         $_SESSION['Active'] = 0; //0 until user activates their account with verify.php
         $_SESSION['logged_in'] = true; // So we know the user has logged in
         $_SESSION['message'] =
-                 "Confirmation link has been sent to $number, please verify
-                 your account by clicking on the link in the message! \n Please give it 5 min max for the sms to arrive";
+                 "Confirmation link has been sent to $email, please verify
+                 your account by clicking on the link in the message! \n Check your spam to make sure email has arrived";
                  $_SESSION['superURL'] = 'https://ouideliver.xyz/Foodie/verify.php?email='.$email;
 
                  //send a text message
@@ -75,7 +75,29 @@ else { // Email doesnt already exist in a database, proceed...
     $nexmo_sms = new NexmoMessage('d6726b9a', '005e2f3453ccb56c');
     // Step 2: Use sendText( $to, $from, $message ) method to send a message. 
     $info = $nexmo_sms->sendText( $number, 'MyApp',''.$thanks);
-   
+
+
+    //send email
+
+        $to   = $email;
+        $from = 'sidlamini15@alustudent.com';
+
+        $subject = "Oui Deliver: Verify your account."; 
+
+        $headers = "From: " . $from . "\r\n";
+        $headers .= "Reply-To: ". $from . "\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+        $message = '<html><body><br><br>';
+        $message .= '<img src="img/Truck.png" style="height: 10vh;margin: 0;position: absolute;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);"><br><br>'; 
+        $message .= '<h1 style="text-align: center; font-family: Avenir">Hi, Sisekelo. Welcome to Oui Deliver.</h1> <br>';
+        $message .= '<h2 style="text-align: center; font-family: Avenir">Let us verify your account.</h2><br>';
+        $message .= '<p style="text-align: center;font-family: Avenir;border: 1px solid blue;background: #04b4aa;padding: 5%;text-decoration: none;color: black;font-size: 150%;margin: 0;"><a href="'.$thanks.'" style="text-decoration: none; color: black;padding: 5%">Click here to verify account</a></p>";
+        $message .= "</body></html>';
+
+        mail($to, $subject, $message, $headers);
+
     header("location: profile.php");
     }
     else {
