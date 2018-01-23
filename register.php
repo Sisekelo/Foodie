@@ -111,3 +111,4 @@ else { // Email doesnt already exist in a database, proceed...
            header("location: error.php");
         }
         }
+}
