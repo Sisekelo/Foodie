@@ -20,7 +20,6 @@ $_SESSION['referer'] = $_POST['referer'];
 $_SESSION['residence'] = $_POST['residence'];
 
 
-
 // Escape all $_POST variables to protect against SQL injections
 $first_name = $mysqli->escape_string($_POST['firstname']);
 $last_name = $mysqli->escape_string($_POST['lastname']);
@@ -68,13 +67,13 @@ else { // Email doesnt already exist in a database, proceed...
                   // Send registration confirmation link (verify.php)
 
      $thanks = 'https://ouideliver.xyz/Foodie/verify.php?email='.$email;
-     $done = preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1">$1</a>', $thanks);
+     /*$done = preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1">$1</a>', $thanks);
 
-    include ( "Nexmo-PHP-lib-master/NexmoMessage.php" );  
+    include ( "Nexmo-PHP-lib-master/NexmoMessage.php" );  */
     // Step 1: Declare new NexmoMessage.
-    $nexmo_sms = new NexmoMessage('d6726b9a', '005e2f3453ccb56c');
+    /*$nexmo_sms = new NexmoMessage('d6726b9a', '005e2f3453ccb56c');*/
     // Step 2: Use sendText( $to, $from, $message ) method to send a message. 
-    $info = $nexmo_sms->sendText( $number, 'MyApp',''.$thanks);
+    /*$info = $nexmo_sms->sendText( $number, 'MyApp',''.$thanks);*/
 
 
     //send email

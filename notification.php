@@ -54,8 +54,6 @@ session_start();
 
     <script type="text/javascript">
 
-        
-
         function reset(){
             var javaScriptVar = document.getElementById("message").innerHTML;
             console.log(javaScriptVar);

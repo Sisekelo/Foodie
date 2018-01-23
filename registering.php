@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     <img src="<?= $picture ?>" id="profile">
     <h1>Please give us some more info, <?= $first_name ?>  </h1>
 
-    <form action="index.php" method="post" class="form" id="registerform">
+    <form action="register.php" method="post" class="form" id="registerform">
 
            <div id="else">
             <input type="text" required name='firstname' placeholder="First name" value="<?= $first_name?>"  />
